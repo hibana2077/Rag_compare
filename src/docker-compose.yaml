@@ -4,6 +4,8 @@ services:
     image: ollama/ollama:latest
     ports:
       - "11434:11434"
+    volumes:
+      - ./ollama:/root/.ollama:rw
     networks:
       - app
     deploy:
@@ -12,11 +14,13 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
-              
+
   web:
     build: ./web
     ports:
       - "80:80"
+    environment:
+      - OLLAMA_SERVER=http://ollama:11434
     networks:
       - app
 

@@ -4,3 +4,9 @@ langchain_community
 langchain
 pandas
 numpy
+graphrag
+faiss-cpu
+langchain-openai
+tiktoken
+arxiv
+pymupdf
