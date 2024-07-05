@@ -41,4 +41,7 @@ st.markdown("Pull a model from the [Ollama Model Repository](https://ollama.com/
 text_input = st.text_input("Model Name")
 if st.button("Pull Model"):
     response = post_pull_model(text_input)
-    st.success(response["status"]) if response["status"] == "success" else st.error(response["status"])
+    if response["success"]:
+        st.success(response["message"])
+    else:
+        st.error(response["message"])

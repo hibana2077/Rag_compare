@@ -35,6 +35,8 @@ if "arxiv_docs" in st.session_state:
             os.mkdir("tmp")
             os.mkdir("tmp/input")
 
+            st.write("Writing Arxiv Full Text to file...")
+            arxiv_docs_full_text = st.session_state["arxiv_docs_full_text"]
             with open("tmp/input/input.txt", "w") as f:
                 f.write(arxiv_docs_full_text)
 
