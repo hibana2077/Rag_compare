@@ -25,6 +25,14 @@ Then open your browser and visit `http://localhost:80`.
 
 ![](./imgs/example.png)
 
+![mode_select](./imgs/mode_selection.png)
+
+![nav_bar](./imgs/nev.png)
+
+## Demo output
+
+[Demo output1](./docs/2407.03140/)
+
 ## License
 
 [MIT](./LICENSE)
